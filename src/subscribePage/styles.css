@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  font-family: Roboto-Regular;
+}
+
+:root {
+  --bg-page: hsl(235, 18%, 26%);
+  --btn-submit: hsl(234, 29%, 20%);
+  --placeholder: hsl(231, 7%, 60%);
+  --error: hsl(4, 100%, 67%);
+  --bg-section: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Roboto-B";
+  src: url("./public/assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./public/assets/fonts/Roboto-Regular.ttf");
+}
+
+#header-subscribe {
+  font-family: Roboto-B;
+}
+
+body {
+  font-family: "Roboto-Regular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-page);
+}
+
+section {
+  display: flex;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#input-email {
+  margin: 10px 0px 20px;
+}
+
+.check-icon {
+  height: 20px;
+}
+
+.submit-btn {
+  border-radius: 7px;
+  height: 40px;
+}
+
+#input-email {
+  border: 1px solid #ebebeb;
+  border-radius: 7px;
+  height: 40px;
+  padding: 0px 20px;
+}
+
+#subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subBenefit {
+  display: flex;
+  gap: 10px;
+}
+
+#email-label {
+  font-family: Roboto-B;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 1440px) {
+  #main-img {
+    background-image: url("./public/assets/images/illustration-sign-up-desktop.svg");
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 593px;
+    border-radius: 30px;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    height: 100vh;
+  }
+
+  section {
+    max-width: 930px;
+    background-color: var(--bg-section);
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 25px 25px 0px;
+    border-radius: 30px;
+  }
+
+  #subscribe {
+    padding: 0px 50px;
+  }
+
+  #header-subscribe {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #subscribe {
+    padding: 40px 25px;
+  }
+
+  #header-subscribe {
+    font-size: 40px;
+  }
+
+  #main-img {
+    background-image: url("./public/assets/images/illustration-sign-up-mobile.svg");
+    background-repeat: no-repeat;
+    width: 375px;
+    height: 284px;
+  }
+
+}
+
+.submit-btn {
+  background-color: var(--btn-submit);
+  color: white;
+  border: none;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #ff5478, #ff6842);
+  box-shadow: 0px 13px 60px -15px #ff5478, 0px 13px 60px -15px #ff6842;
+}
+
+#input-email::placeholder {
+  color: var(--placeholder);
+}
