@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  font-family: Roboto-Regular;
+}
+
+:root {
+  --bg-page: hsl(235, 18%, 26%);
+  --btn-submit: hsl(234, 29%, 20%);
+  --placeholder: hsl(231, 7%, 60%);
+  --error: hsl(4, 100%, 67%);
+  --bg-section: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Roboto-B";
+  src: url("./public/assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./public/assets/fonts/Roboto-Regular.ttf");
+}
+
+body {
+  display: flex;
+}
+
+h1 {
+  font-family: Roboto-B;
+  font-size: 40px;
+}
+
+section {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+#email-validity {
+  font-family: Roboto-B;
+}
+
+#dismiss-btn {
+  border-radius: 8px;
+  font-family: Roboto-B;
+  background-color: var(--btn-submit);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#dismiss-btn:hover {
+  background-image: linear-gradient(135deg, #ff5478, #ff6842);
+  box-shadow: 0px 13px 60px -15px #ff5478, 0px 13px 60px -15px #ff6842;
+}
+
+#success-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-color: var(--bg-page);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  section {
+    background-color: var(--bg-section);
+    border-radius: 30px;
+    padding: 40px;
+    gap: 40px;
+    max-width: 300px;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 44px;
+    font-family: "Roboto-B";
+  }
+
+  #display-message {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  #dismiss-btn {
+    height: 44px;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  body {
+    justify-content: center;
+    height: 100vh;
+    padding: 0px 20px;
+  }
+
+  section {
+    justify-content: space-between;
+    margin: 120px 0px 40px 0px;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  #dismiss-btn {
+    height: 58px;
+  }
+}
